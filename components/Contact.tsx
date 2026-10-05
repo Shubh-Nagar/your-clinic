@@ -51,12 +51,14 @@ export default function Contact() {
                   {clinic.phoneDisplay}
                 </a>
               </li>
-              <li className="flex gap-3">
-                <Mail className="h-5 w-5 shrink-0 text-accent" />
-                <a href={`mailto:${clinic.email}`} className="text-white/80 hover:text-white hover:underline underline-offset-2">
-                  {clinic.email}
-                </a>
-              </li>
+              {clinic.email && (
+                <li className="flex gap-3">
+                  <Mail className="h-5 w-5 shrink-0 text-accent" />
+                  <a href={`mailto:${clinic.email}`} className="text-white/80 hover:text-white hover:underline underline-offset-2">
+                    {clinic.email}
+                  </a>
+                </li>
+              )}
             </ul>
 
             <div className="mt-8 overflow-hidden rounded-xl border border-white/15">

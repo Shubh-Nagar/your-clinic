@@ -6,6 +6,7 @@ import About from "@/components/About";
 import Doctors from "@/components/Doctors";
 import Gallery from "@/components/Gallery";
 import Testimonials from "@/components/Testimonials";
+import CtaBanner from "@/components/CtaBanner";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
       <Doctors />
       <Gallery />
       <Testimonials />
+      <CtaBanner />
       <Faq />
       <Contact />
       <Footer />

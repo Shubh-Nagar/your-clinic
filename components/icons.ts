@@ -12,6 +12,7 @@ import {
   Cpu,
   BadgeCheck,
   Stethoscope,
+  Zap,
   type LucideIcon,
 } from "lucide-react";
 
@@ -30,4 +31,5 @@ export const iconMap: Record<string, LucideIcon> = {
   feather: Feather,
   cpu: Cpu,
   badge: BadgeCheck,
+  laser: Zap,
 };

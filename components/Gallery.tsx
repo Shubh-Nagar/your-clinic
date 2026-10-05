@@ -4,6 +4,17 @@ import { useState } from "react";
 import { clinic } from "@/data/clinic";
 import SmartImage from "./SmartImage";
 
+function PhotoCard({ photo, label }: { photo: string; label: string }) {
+  return (
+    <div className="overflow-hidden rounded-2xl border border-brand/10 bg-white shadow-sm transition hover:shadow-card">
+      <div className="aspect-[4/3] overflow-hidden">
+        <SmartImage src={photo} alt={label} label={label} className="h-full w-full object-cover transition duration-500 hover:scale-105" />
+      </div>
+      <p className="px-4 py-3 text-sm font-medium text-ink/75">{label}</p>
+    </div>
+  );
+}
+
 function CombinedCard({ combined, label }: { combined: string; label: string }) {
   return (
     <div className="overflow-hidden rounded-2xl border border-brand/10 bg-white shadow-sm transition hover:shadow-card">
@@ -52,10 +63,10 @@ export default function Gallery() {
       <div className="container-x">
         <div className="reveal max-w-2xl">
           <span className="eyebrow">
-            <span className="h-px w-6 bg-brand" /> Real results
+            <span className="h-px w-6 bg-brand" /> {clinic.galleryIntro.eyebrow}
           </span>
-          <h2 className="section-title mt-4">Smiles we've transformed</h2>
-          <p className="mt-3 text-ink/65">Real results from real patients — before and after their treatment.</p>
+          <h2 className="section-title mt-4">{clinic.galleryIntro.title}</h2>
+          <p className="mt-3 text-ink/65">{clinic.galleryIntro.sub}</p>
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -65,7 +76,9 @@ export default function Gallery() {
               className="reveal-scale"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              {"combined" in g
+              {"photo" in g
+                ? <PhotoCard photo={g.photo} label={g.label} />
+                : "combined" in g
                 ? <CombinedCard combined={g.combined} label={g.label} />
                 : <BeforeAfter before={g.before} after={g.after} label={g.label} />
               }

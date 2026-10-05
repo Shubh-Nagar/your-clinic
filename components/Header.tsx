@@ -8,7 +8,7 @@ const nav = [
   { label: "Services", href: "#services" },
   { label: "About",    href: "#about" },
   { label: "Doctors",  href: "#doctors" },
-  { label: "Results",  href: "#gallery" },
+  { label: clinic.galleryIntro.navLabel, href: "#gallery" },
   { label: "Reviews",  href: "#reviews" },
   { label: "Contact",  href: "#contact" },
 ];

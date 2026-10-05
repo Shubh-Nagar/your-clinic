@@ -63,8 +63,8 @@ export default function Hero() {
               <Star className="h-5 w-5 fill-current" />
             </div>
             <div className="leading-tight">
-              <p className="font-display text-lg font-semibold text-ink">5.0 / 5</p>
-              <p className="text-xs text-ink/60">Rated by patients on Google</p>
+              <p className="font-display text-lg font-semibold text-ink">{hero.rating}</p>
+              <p className="text-xs text-ink/60">{hero.ratingNote}</p>
             </div>
           </div>
 
