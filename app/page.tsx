@@ -5,12 +5,14 @@ import Services from "@/components/Services";
 import About from "@/components/About";
 import Doctors from "@/components/Doctors";
 import Gallery from "@/components/Gallery";
+import BeforeAfter from "@/components/BeforeAfter";
 import Testimonials from "@/components/Testimonials";
 import CtaBanner from "@/components/CtaBanner";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import BookingPopup from "@/components/BookingPopup";
 
 export default function Home() {
   return (
@@ -22,12 +24,14 @@ export default function Home() {
       <About />
       <Doctors />
       <Gallery />
+      <BeforeAfter />
       <Testimonials />
       <CtaBanner />
       <Faq />
       <Contact />
       <Footer />
       <FloatingButtons />
+      <BookingPopup />
     </main>
   );
 }

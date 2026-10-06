@@ -8,8 +8,8 @@ export default function Hero() {
     <section id="top" className="relative overflow-hidden">
       {/* Ambient colour wash */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute -right-32 -top-24 h-80 w-80 rounded-full bg-brand-tint blur-3xl" />
-        <div className="absolute -left-24 top-40 h-72 w-72 rounded-full bg-accent/10 blur-3xl" />
+        <div className="absolute -right-32 -top-24 h-80 w-80 rounded-full bg-brand-tint blur-3xl" data-parallax="-0.3" />
+        <div className="absolute -left-24 top-40 h-72 w-72 rounded-full bg-accent/10 blur-3xl" data-parallax="0.25" />
       </div>
 
       <div className="container-x grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.05fr_0.95fr]">
@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
 
           <div className="mt-8 animate-fade-up flex flex-wrap items-center gap-3 [animation-delay:270ms]">
-            <a href="#contact" className="btn-primary">
+            <a href="#contact" className="btn-primary btn-beat">
               <CalendarCheck className="h-4 w-4" /> Book an Appointment
             </a>
             <a href={`tel:${clinic.phone}`} className="btn-ghost">
@@ -48,7 +48,7 @@ export default function Hero() {
 
         {/* Right — image slides in from right */}
         <div className="relative animate-slide-right [animation-delay:120ms]">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-xl2 shadow-soft">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-xl2 shadow-soft" data-parallax="-0.06">
             <SmartImage
               src={hero.image}
               alt={`${clinic.name} dental clinic in Indore`}

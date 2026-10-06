@@ -5,21 +5,20 @@ export default function Doctors() {
   return (
     <section id="doctors" className="py-20">
       <div className="container-x">
-        <div className="reveal max-w-2xl">
-          <span className="eyebrow">
+        <div className="max-w-2xl" data-stagger="110">
+          <span className="eyebrow reveal">
             <span className="h-px w-6 bg-brand" /> Meet the team
           </span>
-          <h2 className="section-title mt-4">Specialists who treat you like family</h2>
+          <h2 className="section-title reveal-blur mt-4">Specialists who treat you like family</h2>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {clinic.doctors.map((d, i) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-stagger="150">
+          {clinic.doctors.map((d) => (
             <div
               key={d.name}
-              className="reveal-scale group overflow-hidden rounded-2xl border border-brand/10 bg-white transition-shadow hover:shadow-card"
-              style={{ animationDelay: `${i * 100}ms` }}
+              className="reveal group overflow-hidden rounded-2xl border border-brand/10 bg-white transition-shadow hover:shadow-card"
             >
-              <div className="aspect-[4/5] overflow-hidden bg-brand-tint">
+              <div className="reveal-img aspect-[4/5] overflow-hidden bg-brand-tint">
                 <SmartImage
                   src={d.photo}
                   alt={d.name}

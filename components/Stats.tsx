@@ -26,7 +26,7 @@ function Stat({ value, suffix, label, decimals, run, delay }: any) {
   const shown = useCountUp(value, run, decimals ?? 0);
   return (
     <div
-      className="reveal text-center"
+      className="reveal-scale text-center"
       style={{ animationDelay: `${delay}ms` }}
     >
       <p className="font-display text-3xl font-semibold text-brand sm:text-4xl">

@@ -9,44 +9,43 @@ export default function About() {
 
         {/* Image — slides in from left */}
         <div className="reveal-left relative">
-          <div className="aspect-[5/4] overflow-hidden rounded-xl2 shadow-soft">
+          <div className="reveal-img aspect-video overflow-hidden rounded-xl2 shadow-soft">
             <SmartImage
               src={clinic.clinicImage}
-              alt={`${clinic.name}`}
+              alt={`${clinic.name} clinic building`}
               label="Clinic photo"
               className="h-full w-full object-cover transition duration-700 hover:scale-105"
             />
           </div>
-          <div className="absolute -bottom-6 right-4 hidden rounded-2xl bg-white px-5 py-4 shadow-card sm:block">
+          <div className="reveal-pop absolute -bottom-6 left-4 hidden rounded-2xl bg-white px-5 py-4 shadow-card [animation-delay:700ms] sm:block" data-parallax="-0.08">
             <p className="font-display text-2xl font-semibold text-brand">Since {clinic.establishedYear}</p>
             <p className="text-xs text-ink/60">Serving smiles across Indore</p>
           </div>
         </div>
 
         {/* Content — slides in from right */}
-        <div className="reveal-right">
-          <span className="eyebrow">
+        <div data-stagger="110">
+          <span className="eyebrow reveal">
             <span className="h-px w-6 bg-brand" /> Why patients choose us
           </span>
-          <h2 className="section-title mt-4">
+          <h2 className="section-title reveal-blur mt-4">
             Care you can trust, comfort you can feel
           </h2>
-          <p className="mt-3 text-ink/70">
+          <p className="reveal mt-3 text-ink/70">
             {clinic.name} blends experienced specialists with modern technology
             to deliver treatments that are safe, precise and genuinely
             comfortable — the way dentistry should be.
           </p>
 
-          <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            {clinic.whyChooseUs.map((w, i) => {
+          <div className="mt-8 grid gap-5 sm:grid-cols-2" data-stagger="110" data-stagger-base="350">
+            {clinic.whyChooseUs.map((w) => {
               const Icon = iconMap[w.icon] ?? iconMap.shield;
               return (
                 <div
                   key={w.title}
-                  className="reveal flex gap-3"
-                  style={{ animationDelay: `${200 + i * 100}ms` }}
+                  className="reveal-right group flex gap-3"
                 >
-                  <div className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-brand shadow-sm transition hover:bg-brand hover:text-white">
+                  <div className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-white text-brand shadow-sm transition duration-300 group-hover:-rotate-6 group-hover:scale-110 group-hover:bg-brand group-hover:text-white">
                     <Icon className="h-5 w-5" />
                   </div>
                   <div>

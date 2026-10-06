@@ -62,7 +62,7 @@ export const clinic = {
   },
 
   // --- Clinic photo (used in the About section) ----------------------------
-  clinicImage: "/images/dd-reception.jpg",
+  clinicImage: "/images/dd-building-front.webp",
 
   // --- Stats (animated counters) -------------------------------------------
   stats: [
@@ -71,6 +71,9 @@ export const clinic = {
     { value: 31, suffix: "", label: "Treatments offered" },
     { value: 4.9, suffix: "★", label: "Google rating", decimals: 1 },
   ],
+
+  // --- Services background (stays fixed while the cards scroll over it) -----
+  servicesBg: "/images/dd-clinic-interior.webp",
 
   // --- Services (icon keys must match the map in components/icons.ts) -------
   services: [
@@ -168,6 +171,47 @@ export const clinic = {
     },
   ],
 
+  // --- Before & After -------------------------------------------------------
+  // Per case, set before + after for the drag slider, OR combined for one
+  // side-by-side image. Leave all three empty to show a 'coming soon' slot.
+  // sample: true marks a stand-in photo (shows a 'Sample' tag and its credit)
+  // — replace with the clinic's own consented cases before going live.
+  beforeAfter: {
+    eyebrow: "Before & after",
+    title: "Smiles we've transformed",
+    sub: "Drag the slider to compare. Every case is treated and photographed at Dental Designs.",
+    sampleSub: "Drag the slider to compare the before and after.",
+    cases: [
+      {
+        label: "Smile makeover",
+        treatment: "Ceramic veneers",
+        before: "/images/results/smile-makeover-before.jpg",
+        after: "/images/results/smile-makeover-after.jpg",
+        combined: "",
+        sample: true,
+        credit: "Yvul, CC BY-SA 4.0, via Wikimedia Commons",
+      },
+      {
+        label: "Teeth alignment",
+        treatment: "Orthodontic braces",
+        before: "/images/results/teeth-alignment-before.jpg",
+        after: "/images/results/teeth-alignment-after.jpg",
+        combined: "",
+        sample: true,
+        credit: "Jeffrey Dorfman, CC BY-SA 3.0, via Wikimedia Commons",
+      },
+      {
+        label: "Gum treatment",
+        treatment: "Scaling & gum care",
+        before: "/images/results/gum-treatment-before.jpg",
+        after: "/images/results/gum-treatment-after.jpg",
+        combined: "",
+        sample: true,
+        credit: "Public domain (CC0), via Wikimedia Commons",
+      },
+    ],
+  },
+
   // --- Gallery --------------------------------------------------------------
   // Use { photo } for a clinic tour, { combined } for a side-by-side
   // before/after image, or { before, after } for the interactive slider.
@@ -199,37 +243,64 @@ export const clinic = {
     imageAlt: "Dr. Khushboo Doshi Jajodia",
   },
 
-  // Real Google reviews.
+  // --- Booking pop-up (opens once per visit after the user starts scrolling)
+  bookingPopup: {
+    enabled: true,
+    openDelayMs: 1500, // opens this long after every page load
+    eyebrow: "Limited slots this week",
+    title: "Book your smile check-up",
+    sub: "Pick a treatment and time — we'll confirm on WhatsApp within minutes.",
+    image: "/images/dr-khushboo-cutout.png", // transparent cut-out works best
+    imageAlt: "Dr. Khushboo Doshi Jajodia",
+    doctorName: "Dr. Khushboo Doshi Jajodia",
+    doctorRole: "Cosmetic & General Dentist",
+    perks: ["Consultation ₹400", "No waiting", "Digital X-rays"],
+    closedDays: [0], // 0 = Sunday … 6 = Saturday
+    slots: [
+      { label: "Morning", time: "10 AM – 2 PM" },
+      { label: "Evening", time: "5 PM – 9 PM" },
+    ],
+  },
+
+  // Real Google reviews. `photo`: the reviewer's own profile photo (e.g.
+  // /images/reviews/ankur.jpg), used only with their permission. Leave it
+  // empty to show their initial instead — never use a stand-in face.
   testimonials: [
     {
       name: "Ankur Totala",
       text: "I have been going for my dental treatment at this clinic for a long time for root canal and implant related work and am very happy with the outcome. Dr. Madhur and Dr. Khushboo are excellent with their work and always provide a good consultation for any issues. Highly recommend them.",
       rating: 5,
+      photo: "",
     },
     {
       name: "Navid Quraishi",
       text: "I've recently had two root canals and am about to go for an implant — their professionalism and care throughout my treatments has been nothing short of amazing and accommodating towards me. Highly recommend you to trust your oral healthcare to this practice!",
       rating: 5,
+      photo: "",
     },
     {
       name: "Anushree Verma",
       text: "The doctors are very friendly and they patiently understand problems. I recommend this place for even kids as they made my 4 year old son very comfortable during his checkup. My treatment was done with utmost patience and hygiene.",
       rating: 5,
+      photo: "",
     },
     {
       name: "Karan Jain",
       text: "Dr. Madhur provides exceptional dental care with a gentle and professional approach. The friendly staff and a comfortable environment further enhance the overall experience. Highly recommended for anyone seeking top-notch dental services.",
       rating: 5,
+      photo: "",
     },
     {
       name: "Shilpa Patel",
       text: "We have been associated with Sir and Madam for 15 years; their treatment has always been excellent, and special-needs children also receive very good care.",
       rating: 5,
+      photo: "",
     },
     {
       name: "Anjali Rathore",
       text: "Visited the clinic for teeth cleaning... very satisfied with the hygiene and treatment of both the doctors. Will definitely recommend.",
       rating: 5,
+      photo: "",
     },
   ],
 

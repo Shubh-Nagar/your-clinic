@@ -8,11 +8,11 @@ export default function CtaBanner() {
     // Split background: white on top, tint below — the card straddles the seam
     <section className="bg-[linear-gradient(to_bottom,transparent_55%,rgb(var(--brand-tint)/0.4)_55%)] pb-4 pt-12 lg:pt-28">
       <div className="container-x">
-        <div className="reveal relative rounded-3xl bg-brand shadow-soft">
+        <div className="reveal-scale relative rounded-3xl bg-brand shadow-soft">
           {/* Decorative shapes, clipped to the card */}
           <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-3xl" aria-hidden="true">
-            <div className="absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-white/10 sm:h-[26rem] sm:w-[26rem]" />
-            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/[0.07]" />
+            <div className="absolute -bottom-24 -left-16 h-80 w-80 rounded-full bg-white/10 sm:h-[26rem] sm:w-[26rem]" data-parallax="0.12" />
+            <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/[0.07]" data-parallax="-0.15" />
             <svg
               viewBox="0 0 64 64"
               className="absolute bottom-6 right-6 h-24 w-24 animate-float text-white/20 sm:h-32 sm:w-32 lg:right-10"
@@ -32,17 +32,17 @@ export default function CtaBanner() {
                 src={cta.image}
                 alt={cta.imageAlt}
                 label="Doctor photo"
-                className="relative w-64 drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] sm:w-72 lg:w-[22rem]"
+                className="reveal relative w-64 drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] [animation-delay:250ms] sm:w-72 lg:w-[22rem]"
               />
             </div>
 
-            <div className="px-6 pt-10 text-center text-white sm:px-10 lg:py-14 lg:pr-40 lg:text-left">
-              <h2 className="font-display text-3xl font-medium leading-tight sm:text-4xl">{cta.title}</h2>
-              <p className="mt-4 text-base leading-relaxed text-white/85 sm:text-lg">{cta.sub}</p>
-              <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+            <div className="px-6 pt-10 text-center text-white sm:px-10 lg:py-14 lg:pr-40 lg:text-left" data-stagger="120" data-stagger-base="300">
+              <h2 className="reveal-blur font-display text-3xl font-medium leading-tight sm:text-4xl">{cta.title}</h2>
+              <p className="reveal mt-4 text-base leading-relaxed text-white/85 sm:text-lg">{cta.sub}</p>
+              <div className="reveal mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
                 <a
                   href="#contact"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark shadow-card transition hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="btn-beat inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-brand-dark shadow-card transition [--beat-color:255_255_255] hover:-translate-y-0.5 active:scale-[0.97] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   <CalendarCheck className="h-4 w-4" /> Book an Appointment
                 </a>

@@ -61,20 +61,19 @@ export default function Gallery() {
   return (
     <section id="gallery" className="bg-brand-tint/40 py-20">
       <div className="container-x">
-        <div className="reveal max-w-2xl">
-          <span className="eyebrow">
+        <div className="max-w-2xl" data-stagger="110">
+          <span className="eyebrow reveal">
             <span className="h-px w-6 bg-brand" /> {clinic.galleryIntro.eyebrow}
           </span>
-          <h2 className="section-title mt-4">{clinic.galleryIntro.title}</h2>
-          <p className="mt-3 text-ink/65">{clinic.galleryIntro.sub}</p>
+          <h2 className="section-title reveal-blur mt-4">{clinic.galleryIntro.title}</h2>
+          <p className="reveal mt-3 text-ink/65">{clinic.galleryIntro.sub}</p>
         </div>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {clinic.gallery.map((g, i) => (
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-stagger="110">
+          {clinic.gallery.map((g) => (
             <div
               key={g.label}
               className="reveal-scale"
-              style={{ animationDelay: `${i * 100}ms` }}
             >
               {"photo" in g
                 ? <PhotoCard photo={g.photo} label={g.label} />

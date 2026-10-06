@@ -22,13 +22,13 @@ export default function Contact() {
         <div className="reveal-scale overflow-hidden rounded-xl2 border border-brand/10 bg-white shadow-soft lg:grid lg:grid-cols-2">
 
           {/* Info + map */}
-          <div className="bg-brand-dark p-7 text-white sm:p-10">
-            <h2 className="font-display text-2xl font-medium sm:text-3xl">Book your visit</h2>
-            <p className="mt-2 text-sm text-white/70 sm:text-base">
+          <div className="bg-brand-dark p-7 text-white sm:p-10" data-stagger="100" data-stagger-base="200">
+            <h2 className="reveal-blur font-display text-2xl font-medium sm:text-3xl">Book your visit</h2>
+            <p className="reveal mt-2 text-sm text-white/70 sm:text-base">
               Walk in or message us — we'll find a time that suits you.
             </p>
 
-            <ul className="mt-8 space-y-5 text-sm">
+            <ul className="reveal mt-8 space-y-5 text-sm">
               <li className="flex gap-3">
                 <MapPin className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
                 <span className="text-white/80">
@@ -61,7 +61,7 @@ export default function Contact() {
               )}
             </ul>
 
-            <div className="mt-8 overflow-hidden rounded-xl border border-white/15">
+            <div className="reveal-img mt-8 overflow-hidden rounded-xl border border-white/15">
               <iframe
                 src={clinic.address.mapEmbedSrc}
                 title={`${clinic.name} location`}
@@ -73,12 +73,12 @@ export default function Contact() {
           </div>
 
           {/* Form */}
-          <div className="p-7 sm:p-10">
-            <h3 className="font-display text-xl font-medium text-ink sm:text-2xl">Request an appointment</h3>
-            <p className="mt-1 text-sm text-ink/60">Fill this in and we'll confirm over WhatsApp.</p>
+          <div className="p-7 sm:p-10" data-stagger="90" data-stagger-base="300">
+            <h3 className="reveal-blur font-display text-xl font-medium text-ink sm:text-2xl">Request an appointment</h3>
+            <p className="reveal mt-1 text-sm text-ink/60">Fill this in and we'll confirm over WhatsApp.</p>
 
-            <div className="mt-6 space-y-4">
-              <div>
+            <div className="mt-6 space-y-4" data-stagger="90" data-stagger-base="500">
+              <div className="reveal">
                 <label className="mb-1.5 block text-sm font-medium text-ink/80">Your name</label>
                 <input
                   value={name}
@@ -87,7 +87,7 @@ export default function Contact() {
                   className="w-full rounded-xl border border-brand/15 bg-paper px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10"
                 />
               </div>
-              <div>
+              <div className="reveal">
                 <label className="mb-1.5 block text-sm font-medium text-ink/80">Phone number</label>
                 <input
                   value={phone}
@@ -97,7 +97,7 @@ export default function Contact() {
                   className="w-full rounded-xl border border-brand/15 bg-paper px-4 py-3 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/10"
                 />
               </div>
-              <div>
+              <div className="reveal">
                 <label className="mb-1.5 block text-sm font-medium text-ink/80">Treatment needed</label>
                 <select
                   value={service}
@@ -113,13 +113,13 @@ export default function Contact() {
 
               <button
                 onClick={sendToWhatsApp}
-                className="flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3.5 text-sm font-semibold text-white shadow-soft transition hover:brightness-110 hover:-translate-y-0.5 active:scale-[0.97]"
+                className="reveal flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] py-3.5 text-sm font-semibold text-white shadow-soft transition hover:brightness-110 hover:-translate-y-0.5 active:scale-[0.97]"
               >
                 <MessageCircle className="h-4 w-4" /> Send on WhatsApp
               </button>
               <a
                 href={`tel:${clinic.phone}`}
-                className="btn-ghost w-full"
+                className="btn-ghost reveal w-full"
               >
                 <Phone className="h-4 w-4" /> Or call {clinic.phoneDisplay}
               </a>

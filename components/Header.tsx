@@ -9,6 +9,7 @@ const nav = [
   { label: "About",    href: "#about" },
   { label: "Doctors",  href: "#doctors" },
   { label: clinic.galleryIntro.navLabel, href: "#gallery" },
+  { label: "Results",  href: "#results" },
   { label: "Reviews",  href: "#reviews" },
   { label: "Contact",  href: "#contact" },
 ];
@@ -16,9 +17,19 @@ const nav = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 12);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 12);
+      // Highlight the nav item for the section currently under the header
+      let current = "";
+      for (const n of nav) {
+        const el = document.querySelector(n.href);
+        if (el && el.getBoundingClientRect().top <= 140) current = n.href;
+      }
+      setActive(current);
+    };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -61,9 +72,16 @@ export default function Header() {
               <a
                 key={n.href}
                 href={n.href}
-                className="text-sm font-medium text-ink/70 transition hover:text-brand"
+                className={`group relative py-1 text-sm font-medium transition hover:text-brand ${
+                  active === n.href ? "text-brand" : "text-ink/70"
+                }`}
               >
                 {n.label}
+                <span
+                  className={`absolute inset-x-0 -bottom-0.5 h-0.5 origin-left rounded-full bg-brand transition-transform duration-300 ${
+                    active === n.href ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+                  }`}
+                />
               </a>
             ))}
           </nav>
@@ -73,7 +91,7 @@ export default function Header() {
             <a href={`tel:${clinic.phone}`} className="btn-ghost hidden sm:inline-flex !px-4 !py-2.5 text-xs">
               <Phone className="h-3.5 w-3.5" /> Call
             </a>
-            <a href="#contact" className="btn-primary !px-4 !py-2.5 text-xs sm:!px-5 sm:text-sm">
+            <a href="#contact" className="btn-primary btn-beat !px-4 !py-2.5 text-xs sm:!px-5 sm:text-sm">
               Book Appointment
             </a>
             <button

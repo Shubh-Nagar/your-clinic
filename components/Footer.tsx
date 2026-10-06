@@ -4,8 +4,8 @@ import { Instagram, Facebook, Youtube, MapPin } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-ink text-white/80">
-      <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
-        <div className="lg:col-span-2">
+      <div className="container-x grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4" data-stagger="120">
+        <div className="reveal lg:col-span-2">
           <div className="flex items-center gap-2.5">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={clinic.logo} alt={clinic.name} className="h-9 w-auto" />
@@ -31,7 +31,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="reveal">
           <h4 className="text-sm font-semibold text-white">Visit us</h4>
           <p className="mt-4 flex gap-2 text-sm text-white/60">
             <MapPin className="h-4 w-4 shrink-0" />
@@ -39,7 +39,7 @@ export default function Footer() {
           </p>
         </div>
 
-        <div>
+        <div className="reveal">
           <h4 className="text-sm font-semibold text-white">Hours</h4>
           <ul className="mt-4 space-y-1.5 text-sm text-white/60">
             {clinic.hours.map((h) => (
