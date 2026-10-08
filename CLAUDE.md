@@ -45,6 +45,6 @@ Defined in `app/globals.css` under `@layer components`:
 
 ## Key constraints
 
-- Uses Next.js 14 App Router with TypeScript. No `"use client"` unless interactivity is required (only `SmartImage`, `Stats`, `Gallery`, `BeforeAfter`, `Testimonials`, `Faq`, `Contact`, `BookingPopup`, `ScrollObserver`, `FloatingButtons`, and `Header` are client components).
+- Uses Next.js 14 App Router with TypeScript. No `"use client"` unless interactivity is required (only `SmartImage`, `Stats`, `Gallery`, `BeforeAfter`, `Testimonials`, `Faq`, `Contact`, `BookingPopup`, `ScrollObserver`, `FloatingButtons`, `HeroFloaters`, and `Header` are client components).
 - Fonts (Fraunces display, Plus Jakarta Sans body) load from Google Fonts in `app/layout.tsx`. Font variables `--font-display` and `--font-body` are set in `globals.css`.
 - `next/image` is intentionally avoided in favour of plain `<img>` via `SmartImage` to avoid the need for image domain configuration in `next.config.mjs`.

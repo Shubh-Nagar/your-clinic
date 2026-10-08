@@ -1,6 +1,7 @@
-import { Phone, Star, ShieldCheck, CalendarCheck } from "lucide-react";
+import { Phone, Stethoscope, ShieldCheck, CalendarCheck } from "lucide-react";
 import { clinic } from "@/data/clinic";
 import SmartImage from "./SmartImage";
+import HeroFloaters from "./HeroFloaters";
 
 export default function Hero() {
   const { hero } = clinic;
@@ -11,6 +12,9 @@ export default function Hero() {
         <div className="absolute -right-32 -top-24 h-80 w-80 rounded-full bg-brand-tint blur-3xl" data-parallax="-0.3" />
         <div className="absolute -left-24 top-40 h-72 w-72 rounded-full bg-accent/10 blur-3xl" data-parallax="0.25" />
       </div>
+
+      {/* Floating teeth, sparkles & bubbles — react to the cursor */}
+      <HeroFloaters />
 
       <div className="container-x grid items-center gap-12 py-14 sm:py-20 lg:grid-cols-[1.05fr_0.95fr]">
 
@@ -54,17 +58,18 @@ export default function Hero() {
               alt={`${clinic.name} dental clinic in Indore`}
               label="Clinic / smiling patient photo"
               className="h-full w-full object-cover transition duration-700 hover:scale-105"
+              style={{ objectPosition: hero.imagePosition }}
             />
           </div>
 
-          {/* Rating badge — pops in with spring feel */}
+          {/* Doctor name badge — pops in with spring feel */}
           <div className="absolute -bottom-5 -left-2 flex animate-pop-in items-center gap-3 rounded-2xl bg-white p-3.5 shadow-card [animation-delay:680ms] sm:-left-6">
             <div className="grid h-11 w-11 place-items-center rounded-full bg-brand-tint text-brand">
-              <Star className="h-5 w-5 fill-current" />
+              <Stethoscope className="h-5 w-5" />
             </div>
             <div className="leading-tight">
-              <p className="font-display text-lg font-semibold text-ink">{hero.rating}</p>
-              <p className="text-xs text-ink/60">{hero.ratingNote}</p>
+              <p className="font-display text-lg font-semibold text-ink">{hero.imageDoctorName}</p>
+              <p className="text-xs text-ink/60">{hero.imageDoctorRole}</p>
             </div>
           </div>
 

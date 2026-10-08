@@ -6,7 +6,7 @@ export default function CtaBanner() {
   const { ctaBanner: cta } = clinic;
   return (
     // Split background: white on top, tint below — the card straddles the seam
-    <section className="bg-[linear-gradient(to_bottom,transparent_55%,rgb(var(--brand-tint)/0.4)_55%)] pb-4 pt-12 lg:pt-28">
+    <section className="bg-[linear-gradient(to_bottom,transparent_55%,rgb(var(--brand-tint)/0.4)_55%)] pb-4 pt-12 lg:pt-40">
       <div className="container-x">
         <div className="reveal-scale relative rounded-3xl bg-brand shadow-soft">
           {/* Decorative shapes, clipped to the card */}
@@ -26,13 +26,13 @@ export default function CtaBanner() {
 
           <div className="relative grid items-end gap-6 lg:grid-cols-[0.85fr_1.15fr]">
             {/* Cut-out doctor photo — sits on the card's bottom edge and rises above it */}
-            <div className="relative order-last flex justify-center px-6 lg:order-first lg:-mt-24 lg:px-10">
-              <div className="absolute bottom-0 left-1/2 aspect-square w-64 -translate-x-1/2 rounded-t-full bg-white/10 sm:w-72 lg:w-[22rem]" aria-hidden="true" />
+            <div className="relative order-last flex justify-center px-6 lg:order-first lg:-mt-36 lg:px-4">
+              <div className="absolute bottom-0 left-1/2 aspect-square w-72 -translate-x-1/2 rounded-t-full bg-white/10 sm:w-80 lg:w-[26rem]" aria-hidden="true" />
               <SmartImage
                 src={cta.image}
                 alt={cta.imageAlt}
                 label="Doctor photo"
-                className="reveal relative w-64 drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] [animation-delay:250ms] sm:w-72 lg:w-[22rem]"
+                className="reveal relative w-80 drop-shadow-[0_12px_24px_rgba(0,0,0,0.18)] [animation-delay:250ms] sm:w-96 lg:w-[27rem]"
               />
             </div>
 

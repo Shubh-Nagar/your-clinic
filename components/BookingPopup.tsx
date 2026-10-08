@@ -167,7 +167,7 @@ export default function BookingPopup() {
             src={cfg.image}
             alt={cfg.imageAlt}
             label="Doctor photo"
-            className="absolute bottom-0 left-1/2 w-[88%] max-w-none -translate-x-1/2 drop-shadow-[0_16px_30px_rgba(0,0,0,0.25)]"
+            className="absolute bottom-0 left-1/2 w-[112%] max-w-none -translate-x-1/2 drop-shadow-[0_16px_30px_rgba(0,0,0,0.25)]"
           />
 
           {/* Floating rating chip */}

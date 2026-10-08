@@ -5,14 +5,14 @@ import ScrollObserver from "@/components/ScrollObserver";
 
 export const metadata: Metadata = {
   title: `${clinic.name} | Best Dental Clinic in Indore`,
-  description: `${clinic.tagline}. Dental implants, painless root canal, braces, aligners and smile makeovers by an MDS prosthodontist on Kanadia Road, Indore.`,
+  description: `${clinic.tagline}. Dental implants, painless root canal, braces, aligners and smile makeovers by an MDS prosthodontist in Vijay Nagar, Indore.`,
   keywords: [
     "dental clinic Indore",
     "best dentist Indore",
     "dental implants Indore",
     "painless root canal Indore",
     "braces aligners Indore",
-    "dentist Kanadia Road Indore",
+    "dentist Vijay Nagar Indore",
     "Dental Designs Indore",
   ],
   openGraph: {

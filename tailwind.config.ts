@@ -63,6 +63,20 @@ const config: Config = {
           "0%":   { opacity: "0", transform: "translateX(16px)" },
           "100%": { opacity: "1", transform: "translateX(0)" },
         },
+        // Hero floaters — rotation comes from --r so each item keeps its own tilt
+        drift: {
+          "0%,100%": { transform: "translateY(0) rotate(var(--r, 0deg))" },
+          "50%":     { transform: "translateY(-14px) rotate(calc(var(--r, 0deg) + 8deg))" },
+        },
+        twinkle: {
+          "0%,100%": { opacity: "0.25", transform: "scale(0.6) rotate(0deg)" },
+          "50%":     { opacity: "1",    transform: "scale(1) rotate(45deg)" },
+        },
+        morph: {
+          "0%,100%": { borderRadius: "42% 58% 70% 30% / 45% 45% 55% 55%", transform: "translate(0,0) rotate(0deg)" },
+          "33%":     { borderRadius: "70% 30% 46% 54% / 30% 39% 61% 70%", transform: "translate(18px,-14px) rotate(40deg)" },
+          "66%":     { borderRadius: "34% 66% 38% 62% / 62% 44% 56% 38%", transform: "translate(-12px,12px) rotate(-30deg)" },
+        },
       },
       animation: {
         "fade-up":     "fade-up 0.7s cubic-bezier(0.22,1,0.36,1) both",
@@ -75,6 +89,9 @@ const config: Config = {
         "backdrop-in":  "backdrop-in 0.4s ease-out both",
         "backdrop-out": "backdrop-out 0.28s ease-in both",
         "step-in":      "step-in 0.35s cubic-bezier(0.22,1,0.36,1) both",
+        drift:          "drift 9s ease-in-out infinite",
+        twinkle:        "twinkle 3.2s ease-in-out infinite",
+        morph:          "morph 18s ease-in-out infinite",
       },
     },
   },

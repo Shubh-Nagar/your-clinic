@@ -8,7 +8,7 @@ export const clinic = {
   // --- Identity -------------------------------------------------------------
   name: "Dental Designs",
   shortName: "Dental Designs",
-  tagline: "Caring your 32s — implant, laser & cosmetic dentistry on Kanadia Road, Indore",
+  tagline: "Caring your 32s — implant, laser & cosmetic dentistry in Vijay Nagar, Indore",
   establishedYear: 2009,
   logo: "/images/dd-logo.png",
 
@@ -24,19 +24,19 @@ export const clinic = {
   },
 
   // --- Contact --------------------------------------------------------------
-  phone: "+919893348989", // tel: link (no spaces)
-  phoneDisplay: "+91 98933 48989",
-  whatsapp: "919893348989", // wa.me number (country code, no +)
-  email: "", // no public email listed — row is hidden when empty
+  phone: "+919321732524", // tel: link (no spaces)
+  phoneDisplay: "+91 93217 32524",
+  whatsapp: "919321732524", // wa.me number (country code, no +)
+  email: "shubham.nagar2001@gmail.com",
 
   address: {
-    line1: "G-1 Richa Residency, 31 Palash Palace Colony",
-    line2: "Kanadia Main Road, near Bank of Maharashtra, Indore, MP 452016",
+    line1: "Shop 7, Ivory Square, Plot 22, Scheme No. 78",
+    line2: "Near Vijay Nagar Square, Indore, MP 452010",
     // Paste the clinic's embed src from Google Maps > Share > Embed a map.
     mapEmbedSrc:
-      "https://www.google.com/maps?q=Dental+Designs+Richa+Residency+Palash+Palace+Colony+Kanadia+Road+Indore+452016&output=embed",
+      "https://www.google.com/maps?q=Scheme+No+78+Vijay+Nagar+Indore+452010&output=embed",
     googleMapsUrl:
-      "https://maps.google.com/?q=Dental+Designs+Richa+Residency+Palash+Palace+Colony+Kanadia+Road+Indore+452016",
+      "https://maps.google.com/?q=Scheme+No+78+Vijay+Nagar+Indore+452010",
   },
 
   hours: [
@@ -52,17 +52,21 @@ export const clinic = {
 
   // --- Hero -----------------------------------------------------------------
   hero: {
-    eyebrow: "Implant & Laser Centre · Kanadia Road, Indore",
+    eyebrow: "Implant & Laser Centre · Vijay Nagar, Indore",
     headline: "Designing healthy, confident smiles since 2009.",
-    sub: "Dr. Madhur Jajodia (MDS, Prosthodontist & Implantologist) and Dr. Khushboo Doshi Jajodia treat Indore families with compassion, using the most advanced and accurate technology available.",
-    image: "/images/dd-building.jpg",
+    sub: "Dr. Arjun Malhotra (MDS, Prosthodontist & Implantologist) and Dr. Ananya Malhotra treat Indore families with compassion, using the most advanced and accurate technology available.",
+    image: "/images/ai-dentist.png",
+    imagePosition: "73% center", // crop focus — doctor sits right of centre in this photo
+    // Name card on the hero photo — the doctor shown in `image`
+    imageDoctorName: "Dr. Ananya Malhotra",
+    imageDoctorRole: "Cosmetic & General Dentist",
     rating: "4.9 / 5",
     ratingNote: "90 Google reviews",
     trustChips: ["MDS Prosthodontist", "Invisalign Provider", "Laser Dentistry"],
   },
 
   // --- Clinic photo (used in the About section) ----------------------------
-  clinicImage: "/images/dd-building-front.webp",
+  clinicImage: "/images/ai-dentist.png",
 
   // --- Stats (animated counters) -------------------------------------------
   stats: [
@@ -158,16 +162,18 @@ export const clinic = {
 
   doctors: [
     {
-      name: "Dr. Madhur Jajodia",
+      name: "Dr. Arjun Malhotra",
       role: "Prosthodontist & Implantologist",
       creds: "BDS, MDS (Prosthodontics, Crown & Bridge) · Modern Dental College, Indore · 15+ yrs",
-      photo: "/images/dr-madhur-jajodia.jpg",
+      photo: "/images/ai-dentist-male.png",
+      photoPosition: "73% center", // crop focus — doctor sits right of centre in this photo
     },
     {
-      name: "Dr. Khushboo Doshi Jajodia",
+      name: "Dr. Ananya Malhotra",
       role: "Cosmetic & General Dentist",
       creds: "BDS · 17+ years of experience",
-      photo: "/images/dr-khushboo-doshi-jajodia.jpg",
+      photo: "/images/ai-dentist.png",
+      photoPosition: "73% center", // crop focus — doctor sits right of centre in this photo
     },
   ],
 
@@ -219,7 +225,7 @@ export const clinic = {
     navLabel: "Clinic Tour",
     eyebrow: "Inside Dental Designs",
     title: "A clinic designed around your comfort",
-    sub: "Bright, spotless treatment rooms and a calm waiting lounge on Kanadia Road.",
+    sub: "Bright, spotless treatment rooms and a calm waiting lounge in Vijay Nagar.",
   },
   gallery: [
     { photo: "/images/dd-operatory-1.jpg", label: "Treatment room" },
@@ -239,8 +245,8 @@ export const clinic = {
   ctaBanner: {
     title: "Let's design your best smile",
     sub: "Specialists in Dental Implants, Invisalign, Cosmetic Dentistry & painless Laser RCT.",
-    image: "/images/dr-khushboo-cutout.png",
-    imageAlt: "Dr. Khushboo Doshi Jajodia",
+    image: "/images/dr-ananya-cutout.png",
+    imageAlt: "Dr. Ananya Malhotra",
   },
 
   // --- Booking pop-up (opens once per visit after the user starts scrolling)
@@ -250,9 +256,9 @@ export const clinic = {
     eyebrow: "Limited slots this week",
     title: "Book your smile check-up",
     sub: "Pick a treatment and time — we'll confirm on WhatsApp within minutes.",
-    image: "/images/dr-khushboo-cutout.png", // transparent cut-out works best
-    imageAlt: "Dr. Khushboo Doshi Jajodia",
-    doctorName: "Dr. Khushboo Doshi Jajodia",
+    image: "/images/dr-ananya-cutout.png", // transparent cut-out works best
+    imageAlt: "Dr. Ananya Malhotra",
+    doctorName: "Dr. Ananya Malhotra",
     doctorRole: "Cosmetic & General Dentist",
     perks: ["Consultation ₹400", "No waiting", "Digital X-rays"],
     closedDays: [0], // 0 = Sunday … 6 = Saturday
@@ -268,7 +274,7 @@ export const clinic = {
   testimonials: [
     {
       name: "Ankur Totala",
-      text: "I have been going for my dental treatment at this clinic for a long time for root canal and implant related work and am very happy with the outcome. Dr. Madhur and Dr. Khushboo are excellent with their work and always provide a good consultation for any issues. Highly recommend them.",
+      text: "I have been going for my dental treatment at this clinic for a long time for root canal and implant related work and am very happy with the outcome. Dr. Arjun and Dr. Ananya are excellent with their work and always provide a good consultation for any issues. Highly recommend them.",
       rating: 5,
       photo: "",
     },
@@ -286,7 +292,7 @@ export const clinic = {
     },
     {
       name: "Karan Jain",
-      text: "Dr. Madhur provides exceptional dental care with a gentle and professional approach. The friendly staff and a comfortable environment further enhance the overall experience. Highly recommended for anyone seeking top-notch dental services.",
+      text: "Dr. Arjun provides exceptional dental care with a gentle and professional approach. The friendly staff and a comfortable environment further enhance the overall experience. Highly recommended for anyone seeking top-notch dental services.",
       rating: 5,
       photo: "",
     },
@@ -315,7 +321,7 @@ export const clinic = {
     },
     {
       q: "Do you place dental implants?",
-      a: "Yes. Dental Designs is an Implant & Laser Centre, and implants are planned and placed by Dr. Madhur Jajodia, an MDS prosthodontist and implantologist.",
+      a: "Yes. Dental Designs is an Implant & Laser Centre, and implants are planned and placed by Dr. Arjun Malhotra, an MDS prosthodontist and implantologist.",
     },
     {
       q: "Do you offer invisible aligners?",
@@ -327,7 +333,7 @@ export const clinic = {
     },
     {
       q: "Where exactly is the clinic?",
-      a: "G-1 Richa Residency, Palash Palace Colony on Kanadia Main Road — opposite Shehnai Residency 2, near Bank of Maharashtra, Indore.",
+      a: "Shop 7, Ivory Square, Plot 22, Scheme No. 78 — near Vijay Nagar Square, Indore.",
     },
   ],
 };

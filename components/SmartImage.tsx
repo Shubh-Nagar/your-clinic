@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type CSSProperties } from "react";
 import { ImageIcon } from "lucide-react";
 
 type Props = {
@@ -8,11 +8,12 @@ type Props = {
   alt: string;
   className?: string;
   label?: string;
+  style?: CSSProperties;
 };
 
 // Plain <img> with a branded fallback. Lets the template look clean even
 // before real clinic photos are dropped into /public/images.
-export default function SmartImage({ src, alt, className = "", label }: Props) {
+export default function SmartImage({ src, alt, className = "", label, style }: Props) {
   const [failed, setFailed] = useState(false);
 
   if (failed) {
@@ -36,6 +37,7 @@ export default function SmartImage({ src, alt, className = "", label }: Props) {
       loading="lazy"
       onError={() => setFailed(true)}
       className={className}
+      style={style}
     />
   );
 }
